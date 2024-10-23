@@ -1,0 +1,46 @@
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow-x: auto;
+    display: flex; 
+    scroll-snap-type: x mandatory; /* Set the scroll snap type on the container */
+    scroll-padding: 10px; /* Optional: Adds padding at the end of the scroll */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #888 #f1f1f1; /* Firefox */
+}
+
+.carousel-container::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+    height: 10px; /* Height of the scrollbar */
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 5px; /* Rounded corners for the thumb */
+}
+
+.carousel-container::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar thumb on hover */
+}
+
+.carousel-container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the scrollbar track */
+}
+
+.carousel-slide {
+    display: flex;
+   
+}
+
+.carousel-slide img {
+    flex: 0 0 auto; /* Ensure the images do not shrink or grow */
+    width: auto; /* Adjust image width */
+    height: 300px; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add some space between images */
+    scroll-snap-align: start; /* Align the start of each image with the container */
+    scroll-snap-stop: always; /* Ensure the snap stops at each image */
+    margin: 10px;
+}
+
+
